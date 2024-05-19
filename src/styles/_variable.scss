@@ -1,0 +1,43 @@
+$primary: #f9312f ;
+$secondary: #f4dc61;
+$accent: #404040;
+
+
+.text-primary {
+    color: #f9312f !important
+}
+.text-accent {
+    color: #404040 !important;
+}
+
+
+.text-secondary {
+    color: #f9312f !important;
+}
+
+
+.text-gray {
+    color: #383838 !important;
+    
+}
+
+.bg-primary {
+    background-color: #e5af00 !important;
+}
+
+.bg-success {
+    background-color: #25d366 !important;
+}
+
+.spinner-grow, .spinner-border {
+    width: 1rem !important;
+    height: 1rem !important;
+}
+
+div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
+    background-color: #e5af00 !important ;
+    border-radius: 1rem !important;
+    border-color: transparent !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
