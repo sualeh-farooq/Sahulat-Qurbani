@@ -8,14 +8,14 @@ export default async function handler(req, res) {
       from: email,
       replyTo: email, 
       to: process.env.yourEmail, 
-      subject: subject,
+      subject: 'New Contact Inquiry from Sahulat Qurbani',
       text: `Name:  ${name}  -  Phone: ${number}\n\n\n ${message}`,
     };
 
     try {
       const transporter = nodemailer.createTransport({
-        host: process.env.host,
-        port: process.env.port,
+        host: 'smtp.gmail.com',
+        port: 587,
         secure: false,
         auth: {
           user: process.env.smtpuser,

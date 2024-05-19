@@ -23,7 +23,7 @@ const footer_content = {
       links: [
         { name: "St 9th , Siddeeqabad F.B. Area Block 3, Karimabad, Gulberg Town, Karachi" },
         { name: "+92-332-7879152" },
-        { name: "info@sahulatqurbani.com" },
+        { name: "Sahulatqurbani1@gmail.com" },
         { name: "Support Hours: 9AM - 6PM" },
       ],
     },
@@ -126,7 +126,7 @@ const Footer = () => {
                         <Link href="tel:+923327879152" >+92-332-7879152 </Link>
                       </li>
                       <li>
-                        <Link href="mailto:info@sahulatqurbani.com" >info@sahulatqurbani.com </Link>
+                        <Link href="mailto:Sahulatqurbani1@gmail.com" >Sahulatqurbani1@gmail.com </Link>
                       </li>
                       <li>
                         <Link href="javascript:void(0)" >Support Hours: 12:00PM - 09:00PM</Link>

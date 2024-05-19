@@ -120,7 +120,7 @@ export default function App() {
                 </div>
                 <div className="col-lg-6 col-md-6 col-12 order-1 order-lg-2 mobile_col p-0 d-flex justify-content-center ">
                   <img style={{width: '70%'}} className="skin_banner_img" src="/assets/img/logo/goat-removebg.png" alt="first slider skin" />
-                  <img style={{borderRadius: '100%' , width: '70%'}} className="skin_banner_img_mobile" src="/assets/img/logo/goat-removebg.png" alt="first slider skin" />
+                  <img style={{  width: '70%'}} className="skin_banner_img_mobile" src="/assets/img/logo/goat-removebg.png" alt="first slider skin" />
                 </div>
               </div>
             </div>

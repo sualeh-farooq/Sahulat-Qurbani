@@ -11,7 +11,7 @@ const Wrapper = ({ children }) => {
   return (
     <>
       {children}
-      <ScrollToTop />
+      {/* <ScrollToTop /> */}
     </>
   );
 };

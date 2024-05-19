@@ -21,6 +21,10 @@ $accent: #404040;
     
 }
 
+.fs-large {
+    font-size: medium;
+}
+
 .bg-primary {
     background-color: #e5af00 !important;
 }
@@ -35,7 +39,7 @@ $accent: #404040;
 }
 
 div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
-    background-color: #e5af00 !important ;
+    background-color: #383838 !important ;
     border-radius: 1rem !important;
     border-color: transparent !important;
     outline: none !important;

@@ -10,7 +10,7 @@ const contact_info = {
   St 9th , Siddeeqabad F.B. Area Block 3, Karimabad, Gulberg Town, Karachi
     </>
   ),
-  phone_1: "info@sahulatqurbani.com",
+  phone_1: "Sahulatqurbani1@gmail.com",
   phone_2: "+92-332-7879152",
   open: (
     <>

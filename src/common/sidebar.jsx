@@ -66,8 +66,8 @@ const Sidebar = ({ isActive, setIsActive }) => {
           <a href="tel:+923327879152">
             <i className="fa-solid fa-phone"></i>+92-332-7879152
           </a>
-          <a href="mailto:info@sahulatqurbani.com">
-            <i className="fa-solid fa-envelope"></i>info@sahulatqurbani.com
+          <a href="mailto:Sahulatqurbani1@gmail.com">
+            <i className="fa-solid fa-envelope"></i>Sahulatqurbani1@gmail.com
           </a>
         </div>
        
