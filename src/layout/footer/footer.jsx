@@ -23,7 +23,7 @@ const footer_content = {
       links: [
         { name: "St 9th , Siddeeqabad F.B. Area Block 3, Karimabad, Gulberg Town, Karachi" },
         { name: "+92-332-7879152" },
-        { name: "Sahulatqurbani1@gmail.com" },
+        { name: "sahulatqurbani1@gmail.com" },
         { name: "Support Hours: 9AM - 6PM" },
       ],
     },

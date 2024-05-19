@@ -41,23 +41,23 @@ export default async function handler(req, res) {
         <li>Qurbani Purpose: ${qurbaniPurpose} </li>
         <li>Qurbani Day: ${qurbaniDay} </li>
         
-        {${goat ? '<li>Selected Item: <b>Goat</b> </li>' : ''}}
-        {${goat ? `<li>Goat Quantity: <b>${goatQuantity}</b> </li>` : ''}}
-        {${goat ? `<li>Qurbani Holder Names for Goats : <b>${goatNames}</b> </li>` : ''}}
-        {${goat ? `<li>Subtotal of Goat Qurbanis : <b>${goatTotal}</b> </li>` : ''}}
+        ${goat ? '<li>Selected Item: <b>Goat</b> </li>' : ''}}
+        ${goat ? `<li>Goat Quantity: <b>${goatQuantity}</b> </li>` : ''}
+        ${goat ? `<li>Qurbani Holder Names for Goats : <b>${goatNames}</b> </li>` : ''}
+        ${goat ? `<li>Subtotal of Goat Qurbanis : <b>${goatTotal}</b> </li>` : ''}
 
 
         
-        {${cowShare ? '<li>Selected Item: <b>Cow Share </b></li>' : ''}}
-        {${cowShare ? `<li>Cow Share Quantity: <b>${cowShareQuantity} </b></li>` : ''}}
-        {${cowShare ? `<li>Qurbani Holder Names for Cow Shares :<b> ${shareCowNames}</b> </li>` : ''}}
-        {${cowShare ? `<li>Subtotal of Share Cow Qurbanis : <b>${shareCowTotal}</b> </li>` : ''}}
+        ${cowShare ? '<li>Selected Item: <b>Cow Share </b></li>' : ''}
+        ${cowShare ? `<li>Cow Share Quantity: <b>${cowShareQuantity} </b></li>` : ''}
+        ${cowShare ? `<li>Qurbani Holder Names for Cow Shares :<b> ${shareCowNames}</b> </li>` : ''}
+        ${cowShare ? `<li>Subtotal of Share Cow Qurbanis : <b>${shareCowTotal}</b> </li>` : ''}
 
 
-        {${fullCow ? '<li>Selected Item: <b>Cow Share </b></li>' : ''}}
-        {${fullCow ? `<li>Full Cow Quantity: <b>${cowFullQuantity}</b> </li>` : ''}}
-        {${fullCow ? `<li>Qurbani Holder Names for Full Cow : <b>${fullCowNames}</b> </li>` : ''}}
-        {${fullCow ? `<li>Subtotal of Full Cow Qurbanis : <b>${fullCowTotal}</b> </li>` : ''}}
+        ${fullCow ? '<li>Selected Item: <b>Cow Share </b></li>' : ''}
+        ${fullCow ? `<li>Full Cow Quantity: <b>${cowFullQuantity}</b> </li>` : ''}
+        ${fullCow ? `<li>Qurbani Holder Names for Full Cow : <b>${fullCowNames}</b> </li>` : ''}
+        ${fullCow ? `<li>Subtotal of Full Cow Qurbanis : <b>${fullCowTotal}</b> </li>` : ''}
         
       </ul>
     <p>
@@ -100,12 +100,70 @@ Once you have completed the payment process, we kindly request you to send payme
     </html>
   `;
 
+
+
+
+  const recTemplate = `
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email</title>
+  </head>
+  <body>
+
+   
+   
+    <h3>You have Received new Booking</h3>
+    <p>Here is the booking Summary:</p>
+    <ul>
+      <li>Name: ${name}</li>
+      <li>Phone: ${number}</li>
+      <li>Email: ${email}</li>
+      <li>Address: ${address}</li>
+      <li>Area: ${area} </li>
+      <li>Payment Mode: ${paymentMode} </li>
+      <li>Qurbani Purpose: ${qurbaniPurpose} </li>
+      <li>Qurbani Day: ${qurbaniDay} </li>
+      
+      ${goat ? '<li>Selected Item: <b>Goat</b> </li>' : ''}
+      ${goat ? `<li>Goat Quantity: <b>${goatQuantity}</b> </li>` : ''}
+      ${goat ? `<li>Qurbani Holder Names for Goats : <b>${goatNames}</b> </li>` : ''}
+      ${goat ? `<li>Subtotal of Goat Qurbanis : <b>${goatTotal}</b> </li>` : ''}
+
+
+      
+      ${cowShare ? '<li>Selected Item: <b>Cow Share </b></li>' : ''}
+      ${cowShare ? `<li>Cow Share Quantity: <b>${cowShareQuantity} </b></li>` : ''}
+      ${cowShare ? `<li>Qurbani Holder Names for Cow Shares :<b> ${shareCowNames}</b> </li>` : ''}
+      ${cowShare ? `<li>Subtotal of Share Cow Qurbanis : <b>${shareCowTotal}</b> </li>` : ''}
+
+
+      ${fullCow ? '<li>Selected Item: <b>Cow Share </b></li>' : ''}
+      ${fullCow ? `<li>Full Cow Quantity: <b>${cowFullQuantity}</b> </li>` : ''}
+      ${fullCow ? `<li>Qurbani Holder Names for Full Cow : <b>${fullCowNames}</b> </li>` : ''}
+      ${fullCow ? `<li>Subtotal of Full Cow Qurbanis : <b>${fullCowTotal}</b> </li>` : ''}
+      
+    </ul>
+    `
+
     const mailOptions = {
-      from: email,
+      from: process.env.yourEmail,
+      replyTo: process.env.yourEmail,
+      to: email,
+      subject: 'Thank You For Booking with Sahulat Qurbani',
+      html: qurbaniPersonTemplate
+    };
+
+
+
+    const revmailOptions = {
+      from: process.env.yourEmail,
       replyTo: email,
       to: process.env.yourEmail,
-      subject: 'Thank You For Booking with Us',
-      html: qurbaniPersonTemplate
+      subject: 'New Online Booking Submitted from Sahulat Qurbani',
+      html: recTemplate
     };
 
     try {
@@ -123,7 +181,8 @@ Once you have completed the payment process, we kindly request you to send payme
       });
 
       await transporter.sendMail(mailOptions);
-      console.log('Email sent');
+      await transporter.sendMail(revmailOptions);
+    
       res.status(200).json({ message: 'Email sent' });
     } catch (error) {
       console.error(error);
