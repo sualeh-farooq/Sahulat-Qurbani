@@ -16,51 +16,51 @@ const Qurbani = () => {
   const [paymentMode, setpaymentMode] = useState('');
   const [qurbaniPurpose, setqurbaniPurpose] = useState('');
   const [qurbaniDay, setqurbaniDay] = useState('');
-  const [goat, setGoat] = useState(false);
+  const [Camel, setCamel] = useState(false);
   const [cowShare, setCowShare] = useState(false);
   const [fullCow, setFullCow] = useState(false);
-  const [goatQuantity, setGoatQuantity] = useState(null)
+  const [CamelQuantity, setCamelQuantity] = useState(null)
   const [cowShareQuantity, setCowShareQuantity] = useState(null)
   const [cowFullQuantity, setCowFullQuantity] = useState(null)
-  const [goatTotal, setGoatTotal] = useState(null)
+  const [CamelTotal, setCamelTotal] = useState(null)
   const [shareCowTotal, setShareCowTotal] = useState(null)
   const [fullCowTotal, setFullCowTotal] = useState(null)
   const [grandTotal, setGrandTotal] = useState(0);
   const [alternatePhone, setAlternatePhone] = useState('')
   const [address, setAddress] = useState('')
   const [area, setArea] = useState('')
-  const [goatNames , setGoatNames] = useState('')
+  const [CamelNames , setCamelNames] = useState('')
   const [shareCowNames , setShareCowNames] = useState('')
   const [fullCowNames , setFullCowNames] = useState('')
 
 
-  function calculateGrandTotal(goatTotal, shareCowTotal, fullCowTotal) {
-    const total = goatTotal + shareCowTotal + fullCowTotal;
+  function calculateGrandTotal(CamelTotal, shareCowTotal, fullCowTotal) {
+    const total = CamelTotal + shareCowTotal + fullCowTotal;
     setGrandTotal(total);
   }
 
-  function calculateGoatTotal(e) {
+  function calculateCamelTotal(e) {
     const quantity = Number(e.target.value);
-    const total = quantity * 48500;
-    setGoatQuantity(quantity);
-    setGoatTotal(total);
+    const total = quantity * 45000;
+    setCamelQuantity(quantity);
+    setCamelTotal(total);
     calculateGrandTotal(total, shareCowTotal, fullCowTotal);
   }
 
   function calculateShareCow(e) {
     const quantity = Number(e.target.value);
-    const total = quantity * 28500;
+    const total = quantity * 25500;
     setCowShareQuantity(quantity);
     setShareCowTotal(total);
-    calculateGrandTotal(goatTotal, total, fullCowTotal);
+    calculateGrandTotal(CamelTotal, total, fullCowTotal);
   }
 
   function calculateFullCow(e) {
     const quantity = Number(e.target.value);
-    const total = quantity * 199500;
+    const total = quantity * 178500;
     setCowFullQuantity(quantity);
     setFullCowTotal(total);
-    calculateGrandTotal(goatTotal, shareCowTotal, total);
+    calculateGrandTotal(CamelTotal, shareCowTotal, total);
   }
   const handleSubmit = async (e) => {
     let emailReg = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
@@ -74,9 +74,9 @@ const Qurbani = () => {
                 if (qurbaniPurpose.trim() !== '') {
                   if (qurbaniDay.trim() !== "") {
                     if (checkbox) {
-                      if (goat || cowShare || fullCow) {
-                        if (goat && goatQuantity <= 0) {
-                          toast.error("Please enter a  quantity for Goat", {
+                      if (Camel || cowShare || fullCow) {
+                        if (Camel && CamelQuantity <= 0) {
+                          toast.error("Please enter a  quantity for Camel", {
                             position: "top-center",
                             autoClose: 1500,
                             hideProgressBar: true,
@@ -89,8 +89,8 @@ const Qurbani = () => {
                           return;
                         }
 
-                        if (goat && goatNames.trim() === '') {
-                          toast.error("Please enter the names for goat qurbani", {
+                        if (Camel && CamelNames.trim() === '') {
+                          toast.error("Please enter the names for Camel qurbani", {
                             position: "top-center",
                             autoClose: 1500,
                             hideProgressBar: true,
@@ -175,10 +175,10 @@ const Qurbani = () => {
 
                             qurbaniPurpose , 
                             qurbaniDay,
-                            goat , goatQuantity , goatNames,
+                            Camel , CamelQuantity , CamelNames,
                             cowShare , cowShareQuantity , shareCowNames,
                             fullCow , cowFullQuantity , fullCowNames ,
-                            goatTotal , fullCowTotal , shareCowTotal , grandTotal
+                            CamelTotal , fullCowTotal , shareCowTotal , grandTotal
                            }),
                         });
           
@@ -198,9 +198,9 @@ const Qurbani = () => {
                          setqurbaniPurpose("")
                          setqurbaniDay("")
                          setCheckbox(false)
-                         setGoat(!goat)
-                         setGoatQuantity('')
-                         setGoatNames("")
+                         setCamel(!Camel)
+                         setCamelQuantity('')
+                         setCamelNames("")
                          setCowShare(!cowShare)
                          setCowShareQuantity('')
                          setShareCowNames("")
@@ -220,9 +220,9 @@ const Qurbani = () => {
                          setqurbaniPurpose("")
                          setqurbaniDay("")
                          setCheckbox(false)
-                         setGoat(!goat)
-                         setGoatQuantity('')
-                         setGoatNames("")
+                         setCamel(!Camel)
+                         setCamelQuantity('')
+                         setCamelNames("")
                          setCowShare(!cowShare)
                          setCowShareQuantity('')
                          setShareCowNames("")
@@ -706,12 +706,12 @@ const Qurbani = () => {
                     <input
                       type="checkbox"
                       className="radio_custom"
-                      checked={goat}
-                      id="goat"
-                      onChange={(e) => setGoat(e.target.checked)}
+                      checked={Camel}
+                      id="Camel"
+                      onChange={(e) => setCamel(e.target.checked)}
                     />
-                    <label htmlFor="goat" >
-                      Goat - (Rs. 48,500)
+                    <label htmlFor="Camel" >
+                      Camel Hissa - (Rs. 45,000)
                     </label>
                   </div>
 
@@ -724,7 +724,7 @@ const Qurbani = () => {
                       onChange={(e) => setCowShare(e.target.checked)}
                     />
                     <label htmlFor="cow_share" >
-                      Cow Share - (Rs. 28,500)
+                      Cow Share - (Rs. 25,500)
                     </label>
                   </div>
 
@@ -737,7 +737,7 @@ const Qurbani = () => {
                       onChange={(e) => setFullCow(e.target.checked)}
                     />
                     <label htmlFor="full_cow" >
-                      Full Cow - (Rs. 199,500)
+                      Full Cow - (Rs. 178,500)
                     </label>
                   </div>
 
@@ -755,7 +755,7 @@ const Qurbani = () => {
 
               <div className="table-responsive qurbani_table" >
                 <table className="table table-striped" >
-                  {goat || cowShare || fullCow ? (
+                  {Camel || cowShare || fullCow ? (
                     <>
                       <thead>
                         <tr>
@@ -770,20 +770,20 @@ const Qurbani = () => {
                   ) : null}
 
                   <tbody>
-                    {goat ? (
+                    {Camel ? (
                       <>
                         <tr>
                           <td>
-                            <input className="form-control bg-white width_mobile_scroll " disabled type="text" value="Goat" />
+                            <input className="form-control bg-white width_mobile_scroll " disabled type="text" value="Camel" />
                           </td>
                           <td>
-                            <input min={0} className="form-control bg-white width_mobile_scroll" type="number" onChange={(e) => calculateGoatTotal(e)} value={goatQuantity} />
+                            <input min={0} className="form-control bg-white width_mobile_scroll" type="number" onChange={(e) => calculateCamelTotal(e)} value={CamelQuantity} />
                           </td>
                           <td>
-                            <textarea onChange={(e)=>setGoatNames(e.target.value)} value={goatNames} className="form-control width_mobile_scroll" style={{ height: '100px' }} ></textarea>
+                            <textarea onChange={(e)=>setCamelNames(e.target.value)} value={CamelNames} className="form-control width_mobile_scroll" style={{ height: '100px' }} ></textarea>
                           </td>
                           <td>
-                            <input className="form-control bg-white width_mobile_scroll" type="number" value={goatTotal} readOnly />
+                            <input className="form-control bg-white width_mobile_scroll" type="number" value={CamelTotal} readOnly />
                           </td>
 
                         </tr>
@@ -832,7 +832,7 @@ const Qurbani = () => {
                   </tbody>
 
                   <tfoot>
-                    {goat || cowShare || fullCow ? (
+                    {Camel || cowShare || fullCow ? (
                       <>
                         <tr>
                           <td></td>

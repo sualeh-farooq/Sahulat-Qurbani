@@ -41,10 +41,10 @@ export default async function handler(req, res) {
         <li>Qurbani Purpose: ${qurbaniPurpose} </li>
         <li>Qurbani Day: ${qurbaniDay} </li>
         
-        ${goat ? '<li>Selected Item: <b>Goat</b> </li>' : ''}}
-        ${goat ? `<li>Goat Quantity: <b>${goatQuantity}</b> </li>` : ''}
-        ${goat ? `<li>Qurbani Holder Names for Goats : <b>${goatNames}</b> </li>` : ''}
-        ${goat ? `<li>Subtotal of Goat Qurbanis : <b>${goatTotal}</b> </li>` : ''}
+        ${goat ? '<li>Selected Item: <b>Camel</b> </li>' : ''}}
+        ${goat ? `<li>Camel Hissa Quantity: <b>${goatQuantity}</b> </li>` : ''}
+        ${goat ? `<li>Qurbani Holder Names for Camel : <b>${goatNames}</b> </li>` : ''}
+        ${goat ? `<li>Subtotal of Camel Hissa Qurbanis : <b>${goatTotal}</b> </li>` : ''}
 
 
         
@@ -128,9 +128,9 @@ Once you have completed the payment process, we kindly request you to send payme
       <li>Qurbani Day: ${qurbaniDay} </li>
       
       ${goat ? '<li>Selected Item: <b>Goat</b> </li>' : ''}
-      ${goat ? `<li>Goat Quantity: <b>${goatQuantity}</b> </li>` : ''}
-      ${goat ? `<li>Qurbani Holder Names for Goats : <b>${goatNames}</b> </li>` : ''}
-      ${goat ? `<li>Subtotal of Goat Qurbanis : <b>${goatTotal}</b> </li>` : ''}
+      ${goat ? `<li>Camel Hissa Quantity: <b>${goatQuantity}</b> </li>` : ''}
+      ${goat ? `<li>Qurbani Holder Names for Camel : <b>${goatNames}</b> </li>` : ''}
+      ${goat ? `<li>Subtotal of Camel Qurbanis : <b>${goatTotal}</b> </li>` : ''}
 
 
       
