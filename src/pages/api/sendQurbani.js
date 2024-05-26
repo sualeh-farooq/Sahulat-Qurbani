@@ -9,7 +9,8 @@ export default async function handler(req, res) {
       goat, goatQuantity, goatNames,
       cowShare, cowShareQuantity, shareCowNames,
       fullCow, cowFullQuantity, fullCowNames,
-      goatTotal, fullCowTotal, shareCowTotal, grandTotal
+      goatTotal, fullCowTotal, shareCowTotal, grandTotal ,
+      waqfHissa , waqfQuantity , waqfNames , waqfTotal
 
 
     } = req.body;
@@ -58,6 +59,12 @@ export default async function handler(req, res) {
         ${fullCow ? `<li>Full Cow Quantity: <b>${cowFullQuantity}</b> </li>` : ''}
         ${fullCow ? `<li>Qurbani Holder Names for Full Cow : <b>${fullCowNames}</b> </li>` : ''}
         ${fullCow ? `<li>Subtotal of Full Cow Qurbanis : <b>${fullCowTotal}</b> </li>` : ''}
+
+
+        ${waqfHissa ? '<li>Selected Item: <b>Cow Waqf Hissa </b></li>' : ''}
+        ${waqfHissa ? `<li>Cow Waqf Hissa Quantity: <b>${waqfQuantity}</b> </li>` : ''}
+        ${waqfHissa ? `<li>Qurbani Holder Names for Cow Waqf Hissa : <b>${waqfNames}</b> </li>` : ''}
+        ${waqfHissa ? `<li>Subtotal of Cow Waqf Hissa Qurbanis : <b>${waqfTotal}</b> </li>` : ''}
         
       </ul>
     <p>
@@ -144,6 +151,14 @@ Once you have completed the payment process, we kindly request you to send payme
       ${fullCow ? `<li>Full Cow Quantity: <b>${cowFullQuantity}</b> </li>` : ''}
       ${fullCow ? `<li>Qurbani Holder Names for Full Cow : <b>${fullCowNames}</b> </li>` : ''}
       ${fullCow ? `<li>Subtotal of Full Cow Qurbanis : <b>${fullCowTotal}</b> </li>` : ''}
+
+
+
+      
+      ${waqfHissa ? '<li>Selected Item: <b>Cow Waqf Hissa </b></li>' : ''}
+      ${waqfHissa ? `<li>Cow Waqf Hissa Quantity: <b>${waqfQuantity}</b> </li>` : ''}
+      ${waqfHissa ? `<li>Qurbani Holder Names for Cow Waqf Hissa : <b>${waqfNames}</b> </li>` : ''}
+      ${waqfHissa ? `<li>Subtotal of Cow Waqf Hissa Qurbanis : <b>${waqfTotal}</b> </li>` : ''}
       
     </ul>
     `

@@ -32,36 +32,93 @@ const Qurbani = () => {
   const [CamelNames , setCamelNames] = useState('')
   const [shareCowNames , setShareCowNames] = useState('')
   const [fullCowNames , setFullCowNames] = useState('')
+  
+
+  const [waqfHissa , setWaqfHissa] = useState(false)
+  const [waqfQuantity , setWaqfQuantity] = useState(null)
+  const [waqfNames , setWaqfNames] = useState('')
+  const [waqfTotal , setWaqfTotal] = useState(null)
 
 
-  function calculateGrandTotal(CamelTotal, shareCowTotal, fullCowTotal) {
-    const total = CamelTotal + shareCowTotal + fullCowTotal;
-    setGrandTotal(total);
-  }
+  const [displayWaqf , setDisplayWaqf] = useState(false)
 
-  function calculateCamelTotal(e) {
-    const quantity = Number(e.target.value);
-    const total = quantity * 42000;
-    setCamelQuantity(quantity);
-    setCamelTotal(total);
-    calculateGrandTotal(total, shareCowTotal, fullCowTotal);
-  }
 
-  function calculateShareCow(e) {
-    const quantity = Number(e.target.value);
-    const total = quantity * 25500;
-    setCowShareQuantity(quantity);
-    setShareCowTotal(total);
-    calculateGrandTotal(CamelTotal, total, fullCowTotal);
-  }
 
-  function calculateFullCow(e) {
-    const quantity = Number(e.target.value);
-    const total = quantity * 178500;
-    setCowFullQuantity(quantity);
-    setFullCowTotal(total);
-    calculateGrandTotal(CamelTotal, shareCowTotal, total);
-  }
+
+  // function calculateGrandTotal(CamelTotal, shareCowTotal, fullCowTotal , waqfTotal ) {
+  //   const total = CamelTotal + shareCowTotal + fullCowTotal + waqfTotal
+  //   setGrandTotal(total);
+  // }
+
+  // function calculateWaqf(e) {
+  //   const quantity = Number(e.target.value);
+  //   const total = quantity * 17000;
+  //   setWaqfQuantity(quantity);
+  //   setWaqfTotal(total);
+  //   calculateGrandTotal(waqfQuantity, waqfTotal, total);
+  // }
+
+  // function calculateCamelTotal(e) {
+  //   const quantity = Number(e.target.value);
+  //   const total = quantity * 42000;
+  //   setCamelQuantity(quantity);
+  //   setCamelTotal(total);
+  //   calculateGrandTotal(total, shareCowTotal, fullCowTotal);
+  // }
+
+  // function calculateShareCow(e) {
+  //   const quantity = Number(e.target.value);
+  //   const total = quantity * 25500;
+  //   setCowShareQuantity(quantity);
+  //   setShareCowTotal(total);
+  //   calculateGrandTotal(CamelTotal, total, fullCowTotal);
+  // }
+
+  // function calculateFullCow(e) {
+  //   const quantity = Number(e.target.value);
+  //   const total = quantity * 178500;
+  //   setCowFullQuantity(quantity);
+  //   setFullCowTotal(total);
+  //   calculateGrandTotal(CamelTotal, shareCowTotal, total);
+  // }
+
+  
+function calculateGrandTotal(newCamelTotal, newShareCowTotal, newFullCowTotal, newWaqfTotal) {
+  const total = newCamelTotal + newShareCowTotal + newFullCowTotal + newWaqfTotal;
+  setGrandTotal(total);
+}
+
+function calculateWaqf(e) {
+  const quantity = Number(e.target.value);
+  const total = quantity * 17000;
+  setWaqfQuantity(quantity);
+  setWaqfTotal(total);
+  calculateGrandTotal(CamelTotal, shareCowTotal, fullCowTotal, total);
+}
+
+function calculateCamelTotal(e) {
+  const quantity = Number(e.target.value);
+  const total = quantity * 42000;
+  setCamelQuantity(quantity);
+  setCamelTotal(total);
+  calculateGrandTotal(total, shareCowTotal, fullCowTotal, waqfTotal);
+}
+
+function calculateShareCow(e) {
+  const quantity = Number(e.target.value);
+  const total = quantity * 25500;
+  setCowShareQuantity(quantity);
+  setShareCowTotal(total);
+  calculateGrandTotal(CamelTotal, total, fullCowTotal, waqfTotal);
+}
+
+function calculateFullCow(e) {
+  const quantity = Number(e.target.value);
+  const total = quantity * 178500;
+  setCowFullQuantity(quantity);
+  setFullCowTotal(total);
+  calculateGrandTotal(CamelTotal, shareCowTotal, total, waqfTotal);
+}
   const handleSubmit = async (e) => {
     let emailReg = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
   
@@ -158,6 +215,34 @@ const Qurbani = () => {
                           return;
                         }
 
+
+                        if (waqfHissa && waqfQuantity <= 0) {
+                          toast.error("Please enter a  quantity for Cow Waqf Hissa", {
+                            position: "top-center",
+                            autoClose: 1500,
+                            hideProgressBar: true,
+                            closeOnClick: true,
+                            pauseOnHover: true,
+                            draggable: true,
+                            progress: undefined,
+                            theme: "colored",
+                          });
+                          return;
+                        }
+                        if (waqfHissa && waqfNames.trim() === '') {
+                          toast.error("Please enter the names for Cow Waqf Hissa", {
+                            position: "top-center",
+                            autoClose: 1500,
+                            hideProgressBar: true,
+                            closeOnClick: true,
+                            pauseOnHover: true,
+                            draggable: true,
+                            progress: undefined,
+                            theme: "colored",
+                          });
+                          return;
+                        }
+
                         ///
 
 
@@ -178,7 +263,9 @@ const Qurbani = () => {
                             Camel , CamelQuantity , CamelNames,
                             cowShare , cowShareQuantity , shareCowNames,
                             fullCow , cowFullQuantity , fullCowNames ,
-                            CamelTotal , fullCowTotal , shareCowTotal , grandTotal
+                            CamelTotal , fullCowTotal , shareCowTotal , grandTotal ,
+
+                            waqfHissa , waqfQuantity , waqfNames , waqfTotal
                            }),
                         });
           
@@ -209,6 +296,11 @@ const Qurbani = () => {
                         setFullCowNames("")
                         setAlternatePhone("")
 
+                        setWaqfHissa(false)
+                        setWaqfQuantity('')
+                        setWaqfNames('')
+                        setWaqfTotal('')
+
 
                         } else {
                         setIsLoading(false)
@@ -231,6 +323,10 @@ const Qurbani = () => {
                          setCowFullQuantity('')
                           setFullCowNames("")
                         setAlternatePhone("")
+                        setWaqfHissa(false)
+                        setWaqfQuantity('')
+                        setWaqfNames('')
+                        setWaqfTotal('')
 
                         }
 
@@ -548,7 +644,10 @@ const Qurbani = () => {
                       value="For Myself"
                       id="myself"
                       checked={qurbaniPurpose === 'For Myself'}
-                      onChange={(e) => setqurbaniPurpose(e.target.value)}
+                      onChange={(e) => {
+                        setDisplayWaqf(false)
+                        setqurbaniPurpose(e.target.value)
+                      } }
                     />
                     <label htmlFor="myself" >
                       For Myself
@@ -565,7 +664,10 @@ const Qurbani = () => {
                       className="radio_custom"
                       id="donation"
                       checked={qurbaniPurpose === 'For Donation ( Waqf )'}
-                      onChange={(e) => setqurbaniPurpose(e.target.value)}
+                      onChange={(e) => {
+                        setDisplayWaqf(true)
+                        setqurbaniPurpose(e.target.value)
+                      }}
                     />
                     <label htmlFor="donation" >
                       For Donation ( Waqf )
@@ -745,7 +847,22 @@ const Qurbani = () => {
                   </div>
 
 
-
+                 {displayWaqf ? (
+                  <>
+                   <div className="d-flex justify-content-start align-items-center gap-2" >
+                    <input
+                      type="checkbox"
+                      className="radio_custom"
+                      checked={waqfHissa}
+                      id="full_cow"
+                      onChange={(e) => setWaqfHissa(e.target.checked)}
+                    />
+                    <label htmlFor="full_cow" >
+                      Cow Waqf Hissa - (Rs. 17,000)
+                    </label>
+                  </div>
+                  </>
+                 ):null}
                 </div>
               </div>
             </div>
@@ -758,7 +875,7 @@ const Qurbani = () => {
 
               <div className="table-responsive qurbani_table" >
                 <table className="table table-striped" >
-                  {Camel || cowShare || fullCow ? (
+                  {Camel || cowShare || fullCow || waqfHissa ?  (
                     <>
                       <thead>
                         <tr>
@@ -832,10 +949,31 @@ const Qurbani = () => {
                         </tr>
                       </>
                     ) : null}
+
+                    
+{waqfHissa ? (
+                      <>
+                        <tr>
+                          <td>
+                            <input className="form-control bg-white width_mobile_scroll" disabled type="text" value="Cow Waqf Hissa" />
+                          </td>
+                          <td>
+                            <input min={0} className="form-control bg-white width_mobile_scroll" type="number" onChange={(e) => calculateWaqf(e)} value={waqfQuantity} />
+                          </td>
+                          <td>
+                            <textarea onChange={(e)=>setWaqfNames(e.target.value)} value={waqfNames} className="form-control width_mobile_scroll" style={{ height: '100px' }} ></textarea>
+                          </td>
+                          <td>
+                            <input className="form-control bg-white width_mobile_scroll" type="number" value={waqfTotal} readOnly />
+                          </td>
+
+                        </tr>
+                      </>
+                    ) : null}
                   </tbody>
 
                   <tfoot>
-                    {Camel || cowShare || fullCow ? (
+                    {Camel || cowShare || fullCow || waqfHissa ? (
                       <>
                         <tr>
                           <td></td>
