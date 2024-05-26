@@ -37,7 +37,7 @@
     position: relative;
     z-index: 2;
     @media #{$xxl,$xl} {
-      padding: 40px 15px;
+      // padding: 40px 15px;
     }
   }
 }
@@ -895,6 +895,7 @@
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   right: 0;
   z-index: 999 !important;
+  background-color: #fec200 !important;
 }
 
 // header-sticky
@@ -931,6 +932,8 @@
 }
 .tp-mobile-header-area {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  background-color: #fec200 !important;
+
 
   &.header-sticky {
     position: fixed;

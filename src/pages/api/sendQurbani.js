@@ -89,13 +89,13 @@ export default async function handler(req, res) {
 Once you have completed the payment process, we kindly request you to send payment slip / transfer slip at our whatsapp number to confirm your booking:
 
 <br />
-<b> <a href="https://wa.link/pa7zfv"  > +92-332-7879152 </a> </b>
+<b> <a href="https://wa.link/pa7zfv"  > +92-327-2738989 </a> </b>
 </p>
 
       <p>Feel free to contact us if you have any questions.</p>
       <p>Best regards,</p>
       <p> <b> The Sahulat Qurbani Team </b></p>
-      <p>+92-332-7879152</p>
+      <p>+92-327-2738989</p>
     </body>
     </html>
   `;

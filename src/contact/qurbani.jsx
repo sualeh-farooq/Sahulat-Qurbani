@@ -41,7 +41,7 @@ const Qurbani = () => {
 
   function calculateCamelTotal(e) {
     const quantity = Number(e.target.value);
-    const total = quantity * 45000;
+    const total = quantity * 42000;
     setCamelQuantity(quantity);
     setCamelTotal(total);
     calculateGrandTotal(total, shareCowTotal, fullCowTotal);
@@ -198,15 +198,16 @@ const Qurbani = () => {
                          setqurbaniPurpose("")
                          setqurbaniDay("")
                          setCheckbox(false)
-                         setCamel(!Camel)
+                         setCamel(false)
                          setCamelQuantity('')
                          setCamelNames("")
-                         setCowShare(!cowShare)
+                         setCowShare(false)
                          setCowShareQuantity('')
                          setShareCowNames("")
-                         setFullCow(!fullCow)
+                         setFullCow(false)
                          setCowFullQuantity('')
                         setFullCowNames("")
+                        setAlternatePhone("")
 
 
                         } else {
@@ -220,15 +221,17 @@ const Qurbani = () => {
                          setqurbaniPurpose("")
                          setqurbaniDay("")
                          setCheckbox(false)
-                         setCamel(!Camel)
+                         setCamel(false)
                          setCamelQuantity('')
                          setCamelNames("")
-                         setCowShare(!cowShare)
+                         setCowShare(false)
                          setCowShareQuantity('')
                          setShareCowNames("")
-                         setFullCow(!fullCow)
+                         setFullCow(false)
                          setCowFullQuantity('')
                           setFullCowNames("")
+                        setAlternatePhone("")
+
                         }
 
 
@@ -711,7 +714,7 @@ const Qurbani = () => {
                       onChange={(e) => setCamel(e.target.checked)}
                     />
                     <label htmlFor="Camel" >
-                      Camel Hissa - (Rs. 45,000)
+                      Camel Hissa - (Rs. 42,000)
                     </label>
                   </div>
 

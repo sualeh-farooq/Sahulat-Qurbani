@@ -22,7 +22,7 @@ const footer_content = {
       cls: "footer-col-3",
       links: [
         { name: "St 9th , Siddeeqabad F.B. Area Block 3, Karimabad, Gulberg Town, Karachi" },
-        { name: "+92-332-7879152" },
+        { name: "+92-327-2738989" },
         { name: "sahulatqurbani1@gmail.com" },
         { name: "Support Hours: 9AM - 6PM" },
       ],
@@ -123,7 +123,7 @@ const Footer = () => {
                         </Link>
                       </li>
                       <li>
-                        <Link href="tel:+923327879152" >+92-332-7879152 </Link>
+                        <Link href="tel:+923272738989" >+92-327-2738989 </Link>
                       </li>
                       <li>
                         <Link href="mailto:Sahulatqurbani1@gmail.com" >Sahulatqurbani1@gmail.com </Link>

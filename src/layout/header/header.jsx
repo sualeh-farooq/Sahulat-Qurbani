@@ -182,7 +182,7 @@ const Header = () => {
       </div>
 
       <header className="d-none d-xl-block">
-        <div
+        <div 
         // style={{backgroundColor: '#fec200'}}
           className={`header__area tp-home-one  ${
             sticky ? "header-sticky" : ""

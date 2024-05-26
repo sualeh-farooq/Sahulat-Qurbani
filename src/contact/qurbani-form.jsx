@@ -12,7 +12,7 @@ const contact_info = {
     </>
   ),
   phone_1: "Sahulatqurbani1@gmail.com",
-  phone_2: "+92-332-7879152",
+  phone_2: "+92-327-2738989",
   open: (
     <>
       Monday - Saturday <br />
@@ -28,7 +28,7 @@ const QurbaniForm = () => {
       <section
         style={{ paddingTop: "9rem" }}
         className="contact-area mt-6  pb-20">
-        <section style={{ paddingTop: "2rem"  ,  marginBottom: '2rem' , marginTop: '-15px'  , backgroundColor: '#383838'}}  >
+        <section style={{ paddingTop: "2rem"  ,  marginBottom: '2rem' , marginTop: '-20px'  , backgroundColor: '#383838'}}  >
           <div className="container">
             <div className="row align-items-center">
               <div className="col-lg-12 col-md-7 col-12">

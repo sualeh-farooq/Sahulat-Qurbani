@@ -4,8 +4,7 @@ const SEO = ({ pageTitle }) => (
   <>
     <Head>
       <title>
-        {pageTitle &&
-          `${pageTitle} - Sahulat Qurbani - Ansar-e-Madinah`}
+        Sahulat Qurbani - Ansar-e-Madinah
       </title>
       <meta httpEquiv="x-ua-compatible" content="ie=edge" />
       <meta name="description" content="Sahulat Qurbani - Ansar e Madinah" />

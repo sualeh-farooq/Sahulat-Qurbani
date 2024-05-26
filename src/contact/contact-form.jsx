@@ -11,7 +11,7 @@ const contact_info = {
     </>
   ),
   phone_1: "Sahulatqurbani1@gmail.com",
-  phone_2: "+92-332-7879152",
+  phone_2: "+92-327-2738989",
   open: (
     <>
       Monday - Saturday <br />
@@ -28,7 +28,7 @@ const ContactForm = () => {
         style={{ paddingTop: "9rem" }}
         className="contact-area mt-6  pb-20"
       >
-        <section style={{ paddingTop: "2rem"  ,  marginBottom: '2rem' , marginTop: '-15px'  , backgroundColor: '#383838'}}  >
+        <section style={{ paddingTop: "2rem"  ,  marginBottom: '2rem' , marginTop: '-20px'  , backgroundColor: '#383838'}}  >
           <div className="container">
             <div className="row align-items-center">
               <div className="col-lg-12 col-md-7 col-12">
@@ -49,7 +49,7 @@ const ContactForm = () => {
                 className="tpcontact mr-60 mb-60 "
                
               >
-                <div className="tpcontact__item text-center">
+                <div style={{backgroundColor: '#fec200' ,  boxShadow:'rgba(0, 0, 0, 0.1) 0px 4px 12px'}} className="tpcontact__item text-center">
                   <div className="tpcontact__icon mb-20">
                     <img src="/assets/img/icon/contact-01.svg" alt="" />
                   </div>
@@ -63,7 +63,7 @@ const ContactForm = () => {
               </div>
               <div
                 className="tpcontact mr-60 mb-60 "
-               
+                style={{backgroundColor: '#fec200' ,  boxShadow:'rgba(0, 0, 0, 0.1) 0px 4px 12px'}}
               >
                 <div className="tpcontact__item text-center">
                   <div className="tpcontact__icon mb-20">
@@ -82,7 +82,7 @@ const ContactForm = () => {
               </div>
               <div
                 className="tpcontact mr-60 mb-60 "
-               
+                style={{backgroundColor: '#fec200' ,  boxShadow:'rgba(0, 0, 0, 0.1) 0px 4px 12px'}}
               >
                 <div className="tpcontact__item text-center">
                   <div className="tpcontact__icon mb-20">

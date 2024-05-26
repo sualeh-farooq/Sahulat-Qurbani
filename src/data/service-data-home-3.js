@@ -91,6 +91,46 @@ const ServiceDataHomeThree = [
     icon: "flaticon-blood-test",
     color: "pink-round",
   },
+  {
+    id: 13,
+    img: "/assets/img/13.jpg",
+    name: "Hair Care Products",
+    link: '/assets/img/13.jpg',
+    icon: "flaticon-blood-test",
+    color: "pink-round",
+  },
+  {
+    id: 14,
+    img: "/assets/img/14.jpg",
+    name: "Hair Care Products",
+    link: '/assets/img/14.jpg',
+    icon: "flaticon-blood-test",
+    color: "pink-round",
+  },
+  {
+    id: 15,
+    img: "/assets/img/15.jpg",
+    name: "Hair Care Products",
+    link: '/assets/img/15.jpg',
+    icon: "flaticon-blood-test",
+    color: "pink-round",
+  },
+  {
+    id: 16,
+    img: "/assets/img/16.jpg",
+    name: "Hair Care Products",
+    link: '/assets/img/16.jpg',
+    icon: "flaticon-blood-test",
+    color: "pink-round",
+  },
+  {
+    id: 17,
+    img: "/assets/img/17.jpg",
+    name: "Hair Care Products",
+    link: '/assets/img/17.jpg',
+    icon: "flaticon-blood-test",
+    color: "pink-round",
+  },
 ];
 
 export default ServiceDataHomeThree;

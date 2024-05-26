@@ -104,7 +104,7 @@ export default function App() {
             </div> */}
 
 
-<div style={{paddingLeft: '20px'}} className="bg-dark  container-fluid">
+<div style={{padding: '50px 20px'}} className="bg-dark  container-fluid">
               <div  className="row ">
                 <div  className=" col-lg-6 col-md-12 col-12 order-2 order-lg-1 d-flex flex-column justify-content-center">
                 <h1 className="hero_text text-white" >
@@ -119,8 +119,8 @@ export default function App() {
                     
                 </div>
                 <div className="col-lg-6 col-md-6 col-12 order-1 order-lg-2 mobile_col p-0 d-flex justify-content-center ">
-                  <img style={{width: '70%'}} className="skin_banner_img" src="/assets/img/logo/goat-removebg.png" alt="first slider skin" />
-                  <img style={{  width: '70%'}} className="skin_banner_img_mobile" src="/assets/img/logo/goat-removebg.png" alt="first slider skin" />
+                  <img style={{width: '80%'}} className="skin_banner_img" src="/assets/img/logo/hd-cow.png" alt="first slider skin" />
+                  <img style={{  width: '90%'}} className="skin_banner_img_mobile" src="/assets/img/logo/hd-cow.png" alt="first slider skin" />
                 </div>
               </div>
             </div>

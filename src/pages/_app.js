@@ -7,7 +7,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
     <Component {...pageProps} /> 
-    <FloatingWhatsApp chatMessage='Assalam Walikum , Welcome to Sahulat Qurbani. We are here to assit you.' phoneNumber='923327879152' accountName='Sahulat Qurbani' avatar="https://www.shareicon.net/data/2016/05/27/771332_support_512x512.png" statusMessage='Typically reply within a day'  />
+    <FloatingWhatsApp chatMessage='Assalam Walikum , Welcome to Sahulat Qurbani. We are here to assit you.' phoneNumber='923272738989' accountName='Sahulat Qurbani' avatar="https://www.shareicon.net/data/2016/05/27/771332_support_512x512.png" statusMessage='Typically reply within a day'  />
     </>
   )
 }

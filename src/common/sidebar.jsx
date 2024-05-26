@@ -63,8 +63,10 @@ const Sidebar = ({ isActive, setIsActive }) => {
             <i className="fa-solid fa-location-dot"></i>
             St 9th , Siddeeqabad F.B. Area Block 3, Karimabad, Gulberg Town, Karachi
           </a>
-          <a href="tel:+923327879152">
-            <i className="fa-solid fa-phone"></i>+92-332-7879152
+          <a href="tel:+923272738989">
+            <i className="fa-solid fa-phone"></i>+92-327-2738989
+
+            
           </a>
           <a href="mailto:Sahulatqurbani1@gmail.com">
             <i className="fa-solid fa-envelope"></i>Sahulatqurbani1@gmail.com
@@ -74,12 +76,12 @@ const Sidebar = ({ isActive, setIsActive }) => {
         
         <div className="tpsideinfo__socialicon">
 
-        <a href="https://www.facebook.com">
+        <a href="https://web.facebook.com/profile.php?id=61559403995091">
             <i className="fa-brands fa-facebook-f"></i>
           </a>
 
 
-          <a target='_blank' href="https://www.instagram.com/">
+          <a target='_blank' href="https://www.instagram.com/sahulatqurbani//">
             <i className="fa-brands fa-instagram"></i>
           </a>
         

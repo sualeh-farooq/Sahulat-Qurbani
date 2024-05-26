@@ -47,7 +47,7 @@ const AboutArea = () => {
                 </div>
               </div> */}
 
-<img style={{width: '100%' , height: '100%' , objectFit: 'cover'}} src="https://w0.peakpx.com/wallpaper/348/38/HD-wallpaper-nelore-barretos-bull-bulls-cow-cows-gado-ox-palin-vaca.jpg" />
+<img className="mt-10" style={{width: '100%' , height: '100%' , objectFit: 'cover' , }} src="https://w0.peakpx.com/wallpaper/348/38/HD-wallpaper-nelore-barretos-bull-bulls-cow-cows-gado-ox-palin-vaca.jpg" />
 {/* <img  style={{width: '100%' , height: '100%' , objectFit: 'cover'}} src="https://cdn.britannica.com/48/144348-050-FBB629CB/Madrasah-Jami-Masjid-Shrirangapattana-India-Karnataka.jpg" /> */}
 
             </div>
@@ -56,7 +56,7 @@ const AboutArea = () => {
                 className="about-content about-align mb-60 wow "
                 
               >
-                <div className="tp-section">
+                <div className="tp-section about-content-mobile">
                   <h3 className="tp-section__title ab-title mb-25 text-primary who_we_head">
                  Who We Are !
                   </h3>

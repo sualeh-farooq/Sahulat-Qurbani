@@ -73,7 +73,7 @@ Prioritizing the Needy Families
 const Specialists = () => {
   return (
     <>
-      <section id="choose" style={{backgroundColor: '#000'}} className="choose-area  pt-40  mb-4 " >
+      <section id="choose" style={{backgroundColor: '#242323'}} className="choose-area  pt-40   " >
         <div className="container wow fadeInUp"  data-wow-delay=".8s">
           <div className="row">
             <div className="col-lg-12">
