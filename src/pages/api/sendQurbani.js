@@ -542,30 +542,31 @@ export default async function handler(req, res) {
             <h3>Total Amount Due: <span class="total-amount">Rs. ${grandTotal}</span></h3>
           </div>
           
-          <div class="bank-details">
-            <h3>Bank Details for Online Transfer</h3>
-            <table>
-              <tr>
-                <th>Bank</th>
-                <th>Account Details</th>
-              </tr>
-              <tr>
-                <td>Meezan Bank</td>
-                <td>
-                  <strong>Account Title:</strong> MUHAMMAD ARSALAN<br>
-                  <strong>IBAN:</strong> PK70MEZN0001280104516009<br>
-                  <strong>Account #:</strong> 01280104516009
-                </td>
-              </tr>
-              <tr>
-                <td>Faysal Bank</td>
-                <td>
-                  <strong>Account Title:</strong> SAHULAT QURBANI<br>
-                  <strong>Account #:</strong> 3738301000000429
-                </td>
-              </tr>
-            </table>
-          </div>
+       <div class="bank-details">
+    <h3>Bank Details for Online Transfer</h3>
+    <table>
+        <tr>
+            <th>Bank</th>
+            <th>Account Details</th>
+        </tr>
+        <tr>
+            <td>Meezan Bank</td>
+            <td>
+                <strong>Account Title:</strong> MUHAMMAD ARSALAN<br>
+                <strong>IBAN:</strong> PK70MEZN0001280104516009<br>
+                <strong>Account #:</strong> 01280104516009
+            </td>
+        </tr>
+        <tr>
+            <td>Faysal Bank</td>
+            <td>
+                <strong>Account Title:</strong> SAHULAT QURBANI<br>
+                <strong>IBAN:</strong> PK79FAYS37383010000008558<br>
+                <strong>Account #:</strong> 37383010000008558
+            </td>
+        </tr>
+    </table>
+</div>
 
           <div class="payment-instruction">
             <p class="important">
