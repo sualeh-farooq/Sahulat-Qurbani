@@ -26,8 +26,8 @@ const QurbaniForm = () => {
   return (
     <>
       <section
-        style={{ paddingTop: "9rem" }}
-        className="contact-area mt-6  pb-20">
+        // style={{ paddingTop: "1rem" }}
+        className="contact-area   pb-20">
         <section style={{ paddingTop: "2rem"  ,  marginBottom: '2rem' , marginTop: '-20px'  , backgroundColor: '#383838'}}  >
           <div className="container">
             <div className="row align-items-center">

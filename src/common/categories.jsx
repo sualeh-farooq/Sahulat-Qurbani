@@ -14,7 +14,7 @@ const Categories = () => {
             <div className="col-lg-12 col-md-12 col-12">
               <div className="tp-section pt-0  pb-0 tp-section-center text-center">
               
-                <h3 className="tp-section__title mb-75 text-gray">Glimpse of Qurbani 2023</h3>
+                <h3 className="tp-section__title mb-75 text-gray">Glimpse of Qurbani 2024</h3>
               </div>
             </div>
          

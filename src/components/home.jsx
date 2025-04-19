@@ -8,13 +8,16 @@ import Services from "./services";
 import About from "./about";
 import Categories from "@/common/categories";
 import CarouselComponent from "./partners";
+import QurbaniForm from '@/contact/qurbani-form'
 
 const Home = ()  =>{
     return (
         <div className="container-sec " >
        <HeroBanner />
-       <Services />
-       <Packaging />
+       <QurbaniForm />
+       {/* <Services /> */}
+       {/* <Packaging /> */}
+       <Categories />
        <ChooseUs />
        <Counter />
         {/* <Categories /> */}

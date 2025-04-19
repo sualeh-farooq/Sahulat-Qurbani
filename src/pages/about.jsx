@@ -7,6 +7,7 @@ import SEO from "@/components/seo";
 import About from "@/components/about";
 import NavTab from "@/about/tab";
 import Categories from "@/common/categories";
+import Packaging from "@/components/packaging";
 
 const AboutUs = () => {
   return (
@@ -16,7 +17,8 @@ const AboutUs = () => {
       <SEO  pageTitle="About Us" />
       <About />
       {/* <NavTab /> */}
-      <Categories />
+      {/* <Categories /> */}
+      <Packaging />
      </Layout>
      </Wrapper>
     </> 
