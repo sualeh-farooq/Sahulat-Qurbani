@@ -2015,7 +2015,7 @@ const Qurbani = () => {
                         }}
                       />
                       <label htmlFor="waqf_hissa">
-                        Cow Waqf Hissa - (Rs. 19,500)
+                        Cow Waqf Hissa - (Rs. 19000)
                       </label>
                     </div>
                   )}
