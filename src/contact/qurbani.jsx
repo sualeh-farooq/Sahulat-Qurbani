@@ -1053,7 +1053,7 @@ const Qurbani = () => {
   const CAMEL_PRICE = 48000;  // Updated price
   const COW_SHARE_PRICE = 25500;  // Updated price
   const FULL_COW_PRICE = 178500;  // Updated price
-  const WAQF_PRICE = 19500;  // Updated price
+  const WAQF_PRICE = 19000;  // Updated price
   const DELIVERY_CHARGE = 2500;  // Delivery charge per hissa
 
   // Calculate grand total with consideration for delivery charges
