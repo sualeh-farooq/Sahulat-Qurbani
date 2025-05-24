@@ -1161,65 +1161,139 @@ const Qurbani = () => {
     }
   }
 
-  // Recalculate all totals with delivery charges
-  function recalculateWithDelivery() {
-    if (CamelQuantity) {
-      const total = CamelQuantity * CAMEL_PRICE + CamelQuantity * DELIVERY_CHARGE;
-      setCamelTotal(total);
-    }
+  // // Recalculate all totals with delivery charges
+  // function recalculateWithDelivery() {
+  //   if (CamelQuantity) {
+  //     const total = CamelQuantity * CAMEL_PRICE + CamelQuantity * DELIVERY_CHARGE;
+  //     setCamelTotal(total);
+  //   }
     
-    if (cowShareQuantity) {
-      const total = cowShareQuantity * COW_SHARE_PRICE + cowShareQuantity * DELIVERY_CHARGE;
-      setShareCowTotal(total);
-    }
+  //   if (cowShareQuantity) {
+  //     const total = cowShareQuantity * COW_SHARE_PRICE + cowShareQuantity * DELIVERY_CHARGE;
+  //     setShareCowTotal(total);
+  //   }
     
-    if (cowFullQuantity) {
-      const total = cowFullQuantity * FULL_COW_PRICE + cowFullQuantity * DELIVERY_CHARGE;
-      setFullCowTotal(total);
-    }
+  //   if (cowFullQuantity) {
+  //     const total = cowFullQuantity * FULL_COW_PRICE + cowFullQuantity * DELIVERY_CHARGE;
+  //     setFullCowTotal(total);
+  //   }
     
-    if (waqfQuantity) {
-      const total = waqfQuantity * WAQF_PRICE + waqfQuantity * DELIVERY_CHARGE;
-      setWaqfTotal(total);
-    }
+  //   if (waqfQuantity) {
+  //     const total = waqfQuantity * WAQF_PRICE + waqfQuantity * DELIVERY_CHARGE;
+  //     setWaqfTotal(total);
+  //   }
     
-    calculateGrandTotal(
-      CamelTotal || 0,
-      shareCowTotal || 0,
-      fullCowTotal || 0,
-      waqfTotal || 0
-    );
-  }
+  //   calculateGrandTotal(
+  //     CamelTotal || 0,
+  //     shareCowTotal || 0,
+  //     fullCowTotal || 0,
+  //     waqfTotal || 0
+  //   );
+  // }
 
-  // Recalculate all totals without delivery charges
-  function recalculateWithoutDelivery() {
-    if (CamelQuantity) {
-      const total = CamelQuantity * CAMEL_PRICE;
-      setCamelTotal(total);
-    }
+  // // Recalculate all totals without delivery charges
+  // function recalculateWithoutDelivery() {
+  //   if (CamelQuantity) {
+  //     const total = CamelQuantity * CAMEL_PRICE;
+  //     setCamelTotal(total);
+  //   }
     
-    if (cowShareQuantity) {
-      const total = cowShareQuantity * COW_SHARE_PRICE;
-      setShareCowTotal(total);
-    }
+  //   if (cowShareQuantity) {
+  //     const total = cowShareQuantity * COW_SHARE_PRICE;
+  //     setShareCowTotal(total);
+  //   }
     
-    if (cowFullQuantity) {
-      const total = cowFullQuantity * FULL_COW_PRICE;
-      setFullCowTotal(total);
-    }
+  //   if (cowFullQuantity) {
+  //     const total = cowFullQuantity * FULL_COW_PRICE;
+  //     setFullCowTotal(total);
+  //   }
     
-    if (waqfQuantity) {
-      const total = waqfQuantity * WAQF_PRICE;
-      setWaqfTotal(total);
-    }
+  //   if (waqfQuantity) {
+  //     const total = waqfQuantity * WAQF_PRICE;
+  //     setWaqfTotal(total);
+  //   }
     
-    calculateGrandTotal(
-      CamelTotal || 0,
-      shareCowTotal || 0,
-      fullCowTotal || 0,
-      waqfTotal || 0
-    );
+  //   calculateGrandTotal(
+  //     CamelTotal || 0,
+  //     shareCowTotal || 0,
+  //     fullCowTotal || 0,
+  //     waqfTotal || 0
+  //   );
+  // }
+
+  // Replace the existing recalculateWithDelivery and recalculateWithoutDelivery functions with these fixed versions:
+
+// Recalculate all totals with delivery charges
+function recalculateWithDelivery() {
+  let newCamelTotal = CamelTotal;
+  let newShareCowTotal = shareCowTotal;
+  let newFullCowTotal = fullCowTotal;
+  let newWaqfTotal = waqfTotal;
+
+  if (CamelQuantity) {
+    newCamelTotal = CamelQuantity * CAMEL_PRICE + CamelQuantity * DELIVERY_CHARGE;
+    setCamelTotal(newCamelTotal);
   }
+  
+  if (cowShareQuantity) {
+    newShareCowTotal = cowShareQuantity * COW_SHARE_PRICE + cowShareQuantity * DELIVERY_CHARGE;
+    setShareCowTotal(newShareCowTotal);
+  }
+  
+  if (cowFullQuantity) {
+    newFullCowTotal = cowFullQuantity * FULL_COW_PRICE + cowFullQuantity * DELIVERY_CHARGE;
+    setFullCowTotal(newFullCowTotal);
+  }
+  
+  if (waqfQuantity) {
+    newWaqfTotal = waqfQuantity * WAQF_PRICE + waqfQuantity * DELIVERY_CHARGE;
+    setWaqfTotal(newWaqfTotal);
+  }
+  
+  // Use the newly calculated values for grand total
+  calculateGrandTotal(
+    newCamelTotal || 0,
+    newShareCowTotal || 0,
+    newFullCowTotal || 0,
+    newWaqfTotal || 0
+  );
+}
+
+// Recalculate all totals without delivery charges
+function recalculateWithoutDelivery() {
+  let newCamelTotal = CamelTotal;
+  let newShareCowTotal = shareCowTotal;
+  let newFullCowTotal = fullCowTotal;
+  let newWaqfTotal = waqfTotal;
+
+  if (CamelQuantity) {
+    newCamelTotal = CamelQuantity * CAMEL_PRICE;
+    setCamelTotal(newCamelTotal);
+  }
+  
+  if (cowShareQuantity) {
+    newShareCowTotal = cowShareQuantity * COW_SHARE_PRICE;
+    setShareCowTotal(newShareCowTotal);
+  }
+  
+  if (cowFullQuantity) {
+    newFullCowTotal = cowFullQuantity * FULL_COW_PRICE;
+    setFullCowTotal(newFullCowTotal);
+  }
+  
+  if (waqfQuantity) {
+    newWaqfTotal = waqfQuantity * WAQF_PRICE;
+    setWaqfTotal(newWaqfTotal);
+  }
+  
+  // Use the newly calculated values for grand total
+  calculateGrandTotal(
+    newCamelTotal || 0,
+    newShareCowTotal || 0,
+    newFullCowTotal || 0,
+    newWaqfTotal || 0
+  );
+}
 
 
   // Close delivery info modal
