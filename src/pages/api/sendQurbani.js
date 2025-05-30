@@ -558,11 +558,10 @@ export default async function handler(req, res) {
             </td>
         </tr>
         <tr>
-            <td>Faysal Bank</td>
+            <td> Bank Alfalah</td>
             <td>
                 <strong>Account Title:</strong> SAHULAT QURBANI<br>
-                <strong>IBAN:</strong> PK79FAYS37383010000008558<br>
-                <strong>Account #:</strong> 37383010000008558
+                <strong>Account Number:</strong> 55405002445353
             </td>
         </tr>
     </table>
