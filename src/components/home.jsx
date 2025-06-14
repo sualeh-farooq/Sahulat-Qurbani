@@ -17,7 +17,7 @@ const Home = ()  =>{
        <QurbaniForm />
        {/* <Services /> */}
        {/* <Packaging /> */}
-       <Categories />
+            {  /*<Categories />*/} 
        <ChooseUs />
        <Counter />
         {/* <Categories /> */}
