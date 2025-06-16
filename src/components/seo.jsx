@@ -4,7 +4,7 @@ const SEO = ({ pageTitle }) => (
   <>
     <Head>
       <title>
-        Sahulat Qurbani - Ansar-e-Madinah
+        Sahulat Qurbani - Led by Arsalan Edhi
       </title>
       <meta httpEquiv="x-ua-compatible" content="ie=edge" />
       <meta name="description" content="Sahulat Qurbani - Led by Arsalan Edhi" />
