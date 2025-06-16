@@ -5,7 +5,7 @@ import React from "react";
 const Categories = () => {
   return (
     <>
-      <section
+{/*       <section
         style={{ backgroundImage: `url(/assets/img/shape/shape-bg-01.png)`  }}
         className="services-area tp-common-area pt-40 grey-bg mt-100"
       >
@@ -41,7 +41,7 @@ const Categories = () => {
           </div>
          
         </div>
-      </section>
+      </section> */}
     </>
   );
 };
