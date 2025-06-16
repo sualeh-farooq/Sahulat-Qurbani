@@ -4,10 +4,10 @@ const SEO = ({ pageTitle }) => (
   <>
     <Head>
       <title>
-        Sahulat Qurbani - Led by Arsalan Edhi
+        Sahulat Qurbani
       </title>
       <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-      <meta name="description" content="Sahulat Qurbani - Led by Arsalan Edhi" />
+      <meta name="description" content="Sahulat Qurbani" />
       <meta name="robots" content="noindex, follow" />
       <meta
         name="viewport"
