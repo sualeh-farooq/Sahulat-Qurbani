@@ -1,0 +1,38 @@
+export const mockStats = {
+  totalOrders: 156,
+  pendingOrders: 23,
+  confirmedOrders: 45,
+  paymentReceivedOrders: 38,
+  inProgressOrders: 12,
+  completedOrders: 78,
+  cancelledOrders: 10,
+  totalIncome: 4250000,
+  paymentReceivedAmount: 3800000,
+  paymentPendingAmount: 450000,
+  recentOrders: [
+    {
+      id: "mock-1",
+      order_number: "SQ-20260424-0001",
+      name: "Ahmed Khan",
+      grand_total: 76500,
+      status: "pending",
+      created_at: new Date().toISOString(),
+    },
+    {
+      id: "mock-2",
+      order_number: "SQ-20260423-0099",
+      name: "Fatima Ali",
+      grand_total: 178500,
+      status: "payment_received",
+      created_at: new Date(Date.now() - 86400000).toISOString(),
+    },
+    {
+      id: "mock-3",
+      order_number: "SQ-20260422-0098",
+      name: "Hassan Raza",
+      grand_total: 51000,
+      status: "completed",
+      created_at: new Date(Date.now() - 172800000).toISOString(),
+    },
+  ],
+};

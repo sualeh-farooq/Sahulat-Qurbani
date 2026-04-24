@@ -1,0 +1,225 @@
+.admin-root {
+  background: #f4f6f9;
+  min-height: 100vh;
+}
+
+.admin-sidebar {
+  width: 100%;
+  max-width: 260px;
+  min-height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+@media (max-width: 991.98px) {
+  .admin-sidebar {
+    position: fixed;
+    z-index: 1040;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    transform: translateX(-100%);
+    transition: transform 0.2s ease;
+    max-width: 280px;
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.15);
+  }
+
+  .admin-sidebar.is-open {
+    transform: translateX(0);
+  }
+
+  .admin-sidebar-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 1035;
+  }
+
+  .admin-sidebar-backdrop.is-open {
+    display: block;
+  }
+}
+
+.admin-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.admin-stat-card {
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+
+.admin-login-card {
+  max-width: 420px;
+  width: 100%;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+
+.order-card-mobile {
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* —— Order detail —— */
+.order-detail-hero {
+  border-radius: 16px;
+  background: linear-gradient(135deg, #1e5631 0%, #2d7a40 48%, #3a8f47 100%);
+  color: #fff;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 8px 28px rgba(30, 86, 49, 0.35);
+}
+
+.order-detail-hero .text-white-75 {
+  color: rgba(255, 255, 255, 0.82) !important;
+}
+
+.order-detail-card {
+  border-radius: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  background: #fff;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+  height: 100%;
+}
+
+.order-detail-card__title {
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #6c757d;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.order-dl {
+  display: grid;
+  gap: 0.65rem 1rem;
+}
+
+@media (min-width: 576px) {
+  .order-dl {
+    grid-template-columns: minmax(0, 140px) 1fr;
+  }
+}
+
+.order-dl dt {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #868e96;
+  font-weight: 500;
+}
+
+.order-dl dd {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #212529;
+  word-break: break-word;
+}
+
+.order-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: rgba(30, 86, 49, 0.08);
+  color: #1e5631;
+}
+
+.order-items-table thead th {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #6c757d;
+  border-bottom-width: 1px;
+}
+
+.order-item-mobile {
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: #fafbfc;
+}
+
+.order-timeline {
+  position: relative;
+  padding-left: 1.25rem;
+}
+
+.order-timeline::before {
+  content: "";
+  position: absolute;
+  left: 0.35rem;
+  top: 0.25rem;
+  bottom: 0.25rem;
+  width: 2px;
+  background: linear-gradient(180deg, #1e5631, rgba(30, 86, 49, 0.15));
+  border-radius: 2px;
+}
+
+.order-timeline__item {
+  position: relative;
+  padding-bottom: 1.25rem;
+}
+
+.order-timeline__item::before {
+  content: "";
+  position: absolute;
+  left: -1rem;
+  top: 0.2rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #1e5631;
+  box-shadow: 0 0 0 3px rgba(30, 86, 49, 0.2);
+}
+
+.order-timeline__item:last-child {
+  padding-bottom: 0;
+}
+
+.names-pre {
+  white-space: pre-wrap;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+@media print {
+  .admin-sidebar,
+  .admin-sidebar-backdrop,
+  .no-print {
+    display: none !important;
+  }
+
+  .admin-root {
+    background: #fff;
+  }
+
+  .admin-main {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .order-detail-hero {
+    box-shadow: none;
+    border: 1px solid #dee2e6;
+    color: #000 !important;
+    background: #f8f9fa !important;
+  }
+
+  .order-detail-hero * {
+    color: #000 !important;
+  }
+
+  .admin-stat-card,
+  .order-detail-card {
+    box-shadow: none !important;
+    break-inside: avoid;
+  }
+}
